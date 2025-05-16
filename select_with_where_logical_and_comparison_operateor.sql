@@ -57,4 +57,7 @@ SELECT * FROM students2
     WHERE country <> 'USA';
 
 SELECT * FROM students2
+    WHERE country <> 'USA' AND age= 20;
+
+SELECT * FROM students2
     WHERE age > 20 AND course = 'History';
