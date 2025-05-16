@@ -1,4 +1,9 @@
 -- Active: 1747405528919@@127.0.0.1@5432@text_db2
+
+
+-- add column insert values drop column 
+
+
 SELECT * FROM person4;
 
 ALTER TABLE person4
@@ -30,3 +35,8 @@ alter TABLE person4
 
 ALTER TABLE person4
     ALTER COLUMN user_age DROP NOT NULL;
+
+
+alter TABLE person4
+    ALTER COLUMN user_age SET UNIQUE;         -- we cant use unique
+
