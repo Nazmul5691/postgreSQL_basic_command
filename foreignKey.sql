@@ -33,6 +33,3 @@ ALTER TABLE post
     alter COLUMN user_id set NOT NULL;
 
 
-
-INSERT into post
-    VALUES('test')
