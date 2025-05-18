@@ -64,3 +64,5 @@ SELECT * FROM post
  RIGHT  OUTER JOIN "user" on post.user_id = "user".id                   --right OUTER join, same as right join
  
 
+SELECT * FROM post 
+ FULL JOIN "user" on post.user_id = "user".id   
