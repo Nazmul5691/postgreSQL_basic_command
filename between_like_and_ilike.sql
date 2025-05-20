@@ -44,5 +44,12 @@ SELECT * FROM students2
     WHERE first_name ILIKE 'a%';               -- ilike is case insensitive
 
 
+SELECT * FROM students2
+    WHERE first_name LIKE '___a_';               -- last a 3 ta character then a then one character
+
+SELECT * FROM students2
+    WHERE first_name ILIKE 'a%';   
+
+
 
 
