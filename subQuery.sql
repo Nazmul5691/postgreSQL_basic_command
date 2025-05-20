@@ -77,6 +77,13 @@ SELECT department_name FROM (SELECT department_name, sum(salary) FROM employees 
 
 
 
+SELECT employee_name, salary, department_name 
+FROM employees 
+WHERE department_name in 
+(SELECT department_name FROM employees WHERE department_name LIKE '%R%');
+
+
+
 
 
 
