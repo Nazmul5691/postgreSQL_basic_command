@@ -18,7 +18,7 @@ FROM employees
 WHERE department_name in 
 (SELECT department_name FROM employees WHERE department_name LIKE '%R%');
 
-SELECT * FROM text_view1;
+SELECT * FROM text_view1;           --non materialized view
 
 
 views
