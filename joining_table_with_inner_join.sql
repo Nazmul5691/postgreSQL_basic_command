@@ -46,8 +46,11 @@ SELECT p.id FROM post p
    JOIN "user" on p.user_id = "user".id;            -- alias
 
 SELECT p.id FROM post p
-   JOIN "user"u on p.user_id = u.id;   
-            -- alias
+   JOIN "user"u on p.user_id = u.id;                -- alias
+   
 SELECT p.id FROM post as p
    JOIN "user" as u on p.user_id = u.id;            -- alias
+
+SELECT p.id FROM post as p
+   JOIN "user" as u on p.user_id = u.id;   
 
