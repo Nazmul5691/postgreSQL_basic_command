@@ -62,3 +62,21 @@ SELECT * FROM employees WHERE salary > (SELECT MAX(salary) FROM employees WHERE 
 
 
 -- we can use subQuery in - WHERE, SELECT , FROM
+
+SELECT *, (SELECT sum(salary) FROM employees) FROM employees;
+
+SELECT department_name, sum(salary) FROM employees GROUP BY department_name;
+
+SELECT * FROM (SELECT department_name, sum(salary) FROM employees GROUP BY department_name) as sum_dept_salary;
+
+SELECT * FROM      -- outer query / main query
+(SELECT department_name, sum(salary) FROM employees GROUP BY department_name) as sum_dept_salary;   -- subQuery
+
+
+SELECT department_name FROM (SELECT department_name, sum(salary) FROM employees GROUP BY department_name) as sum_dept_salary;
+
+
+
+
+
+
