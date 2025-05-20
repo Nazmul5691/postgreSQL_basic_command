@@ -38,5 +38,10 @@ SELECT customer_id, count(order_id), sum(total_amount) as total_amount FROM orde
 
 
 
+ --7: Find the total amount of orders placed each month in the year 2022.
+SELECT * FROM orders
 
+SELECT extract(MONTH FROM order_date) FROM orders;               --extract month
+
+SELECT extract(MONTH FROM order_date) as month, sum(total_amount) FROM orders where extract(year from order_date) = 2022 GROUP BY month;        --extract year total and use condition
 
