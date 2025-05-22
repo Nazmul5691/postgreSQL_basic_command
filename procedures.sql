@@ -58,3 +58,25 @@ CALL remove_emp_id(26);
 SELECT * FROM employees;
 
 
+
+CREATE Procedure remove_emp_id2(p_emp_id INT)
+LANGUAGE plpgsql
+AS
+$$
+    DECLARE
+      test_var INT;
+    BEGIN
+        SELECT employee_id INTO test_var FROM employees WHERE employee_id = p_emp_id;
+        DELETE FROM employees WHERE employee_id = test_var;
+
+        RAISE NOTICE 'Employee Deleted Successfully';
+    END
+$$
+
+CALL remove_emp_id2(24);
+
+
+SELECT * FROM employees;
+
+
+
